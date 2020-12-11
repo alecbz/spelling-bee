@@ -41,7 +41,7 @@ class Game:
 
 
 def load_words():
-    with open("/usr/share/dict/words") as f:
+    with open("words") as f:
         words = [word.strip() for word in f]
 
     return [Entry(word, frozenset(word)) for word in words]
