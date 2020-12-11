@@ -32,7 +32,7 @@ data class Game(val central: Char, val others: List<Char>, val matching: List<St
             }
 
             val allPanagrams = matching.filter { it.letters.size == 7 }
-            val matchingList = allPanagrams.sortedBy {it.word} + (matching - allPanagrams).sortedBy{it.word}
+            val matchingList = allPanagrams.sortedBy { it.word } + (matching - allPanagrams).sortedBy { it.word }
 
             return Game(central, (panagram.letters - setOf(central)).toList(), matchingList.map { it.word })
         }
